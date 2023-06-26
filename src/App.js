@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About';
 import Nav from './components/Nav';
 import TextForm from './components/TextForm';
+import Footer from './components/Footer';
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -24,7 +25,8 @@ function App() {
     <>
     <Nav title="TextUtils" link1="Home" link2="About us" dropdown="Our Services" toggleDarkMode={toggleDarkMode} mode={mode}/>
     <TextForm heading="Enter the text to analyze below" mode={mode}/>
-    <About mode={mode}/>
+    <About mode={mode} modal="Sign up now!"/>
+    <Footer title="TextUtils"  mode={mode}/>
     </>
   );
 }
